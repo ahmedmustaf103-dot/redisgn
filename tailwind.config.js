@@ -13,9 +13,8 @@ export default {
       colors: {
         cream: '#F8F6F3',
         charcoal: '#1A1A1A',
-        gold: '#C9A962',
         muted: '#6B6B6B',
-        // Waten brand (align with waten.com)
+        // Waten brand — update with exact hex from waten.com if provided
         waten: {
           dark: '#0D2E24',
           green: '#1B4D3E',

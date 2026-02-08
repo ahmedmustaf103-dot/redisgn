@@ -30,7 +30,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-stone-200 hover:text-waten-light transition-colors text-sm uppercase tracking-wider"
+                className="text-stone-200 hover:text-waten-accent transition-colors text-sm uppercase tracking-wider"
               >
                 {link.label}
               </a>
@@ -59,7 +59,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-stone-200 hover:text-waten-light transition-colors text-sm uppercase tracking-wider"
+                className="text-stone-200 hover:text-waten-accent transition-colors text-sm uppercase tracking-wider"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

@@ -18,9 +18,9 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <WhyChooseUs />
         <About />
         <FeaturedProjects />
-        <WhyChooseUs />
         <TrustElements />
         <Team />
         <Contact />

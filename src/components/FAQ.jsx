@@ -19,7 +19,7 @@ export default function FAQ() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section id="faq" className="py-24 lg:py-32 bg-white">
       <div className="max-w-3xl mx-auto px-6">
         <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium text-center mb-12">
           FAQ

@@ -40,15 +40,17 @@ export default function FeaturedProjects() {
   const [cityFilter, setCityFilter] = useState(ALL);
   const [typeFilter, setTypeFilter] = useState(ALL);
   const [statusFilter, setStatusFilter] = useState(ALL);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const filtered = useMemo(() => {
     return projects.filter((p) => {
+      if (searchQuery && !p.title.toLowerCase().includes(searchQuery.toLowerCase()) && !p.location.toLowerCase().includes(searchQuery.toLowerCase())) return false;
       if (cityFilter !== ALL && p.city !== cityFilter) return false;
       if (typeFilter !== ALL && p.type !== typeFilter) return false;
       if (statusFilter !== ALL && p.status !== statusFilter) return false;
       return true;
     });
-  }, [cityFilter, typeFilter, statusFilter]);
+  }, [searchQuery, cityFilter, typeFilter, statusFilter]);
 
   return (
     <section id="projects" className="py-24 lg:py-32 bg-white">
@@ -63,6 +65,20 @@ export default function FeaturedProjects() {
           <p className="text-muted text-lg">
             Thoughtfully designed developments across the major cities of the Kingdom.
           </p>
+        </div>
+
+        {/* Property Search Bar */}
+        <div className="max-w-xl mx-auto mb-8">
+          <label htmlFor="property-search" className="sr-only">Search properties</label>
+          <input
+            id="property-search"
+            type="search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search by project name or location..."
+            className="w-full px-4 py-3 bg-cream border border-stone-300 text-charcoal placeholder:text-muted focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none rounded"
+            aria-label="Search properties"
+          />
         </div>
 
         {/* Filter UI */}
@@ -129,16 +145,17 @@ export default function FeaturedProjects() {
                   </div>
                 </div>
                 <div className="p-8">
-                  <p className="text-waten-accent text-sm font-medium mb-1">{project.location}</p>
-                  <h3 className="font-serif text-2xl text-charcoal font-medium mb-3">
+                  <p className="text-waten-accent text-sm font-medium mb-1">{project.city} — {project.type}</p>
+                  <h3 className="font-serif text-2xl text-charcoal font-medium mb-2">
                     {project.title}
                   </h3>
-                  <div className="flex gap-4 text-muted text-sm mb-4">
+                  <p className="text-muted text-sm mb-3">{project.location}</p>
+                  <div className="flex gap-4 text-muted text-xs mb-4">
                     <span>{project.type}</span>
                     <span>·</span>
                     <span>{project.status}</span>
                   </div>
-                  <span className="inline-flex items-center text-waten-green font-medium hover:underline">
+                  <span className="inline-flex items-center text-waten-accent font-medium hover:underline">
                     Read more →
                   </span>
                 </div>
