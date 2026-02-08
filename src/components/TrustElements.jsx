@@ -27,7 +27,7 @@ const partners = [
 
 export default function TrustElements() {
   return (
-    <section className="py-24 lg:py-32 bg-cream">
+    <section className="py-24 lg:py-32 bg-waten-card">
       <div className="max-w-7xl mx-auto px-6">
         {/* Company Metrics */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
@@ -46,7 +46,7 @@ export default function TrustElements() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((t, i) => (
-              <blockquote key={i} className="p-8 bg-white border border-stone-200/80 rounded-lg">
+              <blockquote key={i} className="p-8 bg-waten-bg border border-waten-stone rounded-lg">
                 <p className="text-charcoal text-lg leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
                 <footer>
                   <p className="font-medium text-charcoal">{t.author}</p>

@@ -19,7 +19,7 @@ export default function FAQ() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="faq" className="py-24 lg:py-32 bg-white">
+    <section id="faq" className="py-24 lg:py-32 bg-waten-bg">
       <div className="max-w-3xl mx-auto px-6">
         <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium text-center mb-12">
           FAQ
@@ -33,17 +33,17 @@ export default function FAQ() {
               <button
                 type="button"
                 onClick={() => setOpen(open === i ? -1 : i)}
-                className="w-full flex items-center justify-between p-6 text-left font-medium text-charcoal hover:bg-cream/50 transition-colors"
+                className="w-full flex items-center justify-between p-6 text-left font-medium text-charcoal hover:bg-waten-card/50 transition-colors"
                 aria-expanded={open === i}
               >
                 {faq.q}
                 <span className="flex-shrink-0 ml-2">
                   {open === i ? (
-                    <svg className="w-5 h-5 text-waten-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-waten-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                     </svg>
                   ) : (
-                    <svg className="w-5 h-5 text-waten-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-waten-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   )}

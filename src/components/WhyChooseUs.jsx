@@ -39,7 +39,7 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-waten" className="relative py-24 lg:py-32 bg-waten-tan text-waten-ink overflow-hidden">
+    <section id="why-waten" className="relative py-24 lg:py-32 bg-waten-card text-waten-ink overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6">
         <header className="text-center max-w-2xl mx-auto mb-16">
           <p className="uppercase tracking-[0.25em] text-waten-muted text-xs font-medium mb-4">
@@ -57,9 +57,9 @@ export default function WhyChooseUs() {
           {benefits.map((benefit, i) => (
             <article
               key={i}
-              className="group flex gap-6 p-8 lg:p-10 bg-waten-bg border border-waten-stone hover:border-waten-ink/30 transition-all duration-300 rounded-lg"
+              className="group flex gap-6 p-8 lg:p-10 bg-waten-bg border border-waten-stone hover:border-waten-accent/40 transition-all duration-300 rounded-lg"
             >
-              <div className="flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-waten-ink/10 flex items-center justify-center text-waten-ink group-hover:bg-waten-ink group-hover:text-white transition-colors duration-300">
+              <div className="flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-waten-accent/20 flex items-center justify-center text-waten-ink group-hover:bg-waten-accent group-hover:text-white transition-colors duration-300">
                 {benefit.icon}
               </div>
               <div className="min-w-0">

@@ -16,7 +16,7 @@ export default function FloatingCTA() {
   return (
     <a
       href="#contact"
-      className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 bg-waten-ink text-white font-medium rounded-full shadow-lg hover:bg-charcoal transition-all duration-300"
+      className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 bg-waten-accent text-white font-medium rounded-full shadow-lg hover:bg-waten-ink transition-all duration-300"
       aria-label="Contact us"
     >
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

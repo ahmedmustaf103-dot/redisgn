@@ -11,16 +11,17 @@ export default {
         sans: ['DM Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
-        cream: '#F8F6F3',
-        charcoal: '#1A1A1A',
+        cream: '#F5F1E8',
+        charcoal: '#111111',
         muted: '#6B6B6B',
-        // Waten brand — neutral palette from official waten.com (beige, tan, black)
+        // Waten brand — signature palette (warm sand, black, luxury brown)
         waten: {
-          bg: '#F8F6F3',
-          tan: '#E8E4DF',
-          stone: '#D4CFC8',
-          ink: '#1A1A1A',
-          muted: '#5C5C5C',
+          bg: '#E9E1D2',      // Primary background — warm sand/beige
+          card: '#F5F1E8',    // Secondary neutral — cards, alternate sections
+          stone: '#D4CFC8',   // Borders / subtle dividers
+          ink: '#111111',     // Primary text / headings
+          muted: '#5C5C5C',   // Secondary text
+          accent: '#3A332A',  // Deep brown — buttons, hover, footer
         },
       },
     },

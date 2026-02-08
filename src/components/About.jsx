@@ -30,7 +30,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-32 bg-cream">
+    <section id="about" className="py-24 lg:py-32 bg-waten-bg">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div>
@@ -54,9 +54,9 @@ export default function About() {
             {features.map((feature, i) => (
               <div
                 key={i}
-                className="flex gap-6 p-8 bg-white border border-stone-200/80 hover:border-waten-ink/30 transition-colors group"
+                className="flex gap-6 p-8 bg-waten-card border border-waten-stone hover:border-waten-accent/40 transition-colors group"
               >
-                <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center bg-waten-tan text-waten-ink group-hover:bg-waten-ink group-hover:text-white transition-colors">
+                <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center bg-waten-card text-waten-ink group-hover:bg-waten-accent group-hover:text-white transition-colors">
                   {feature.icon}
                 </div>
                 <div>

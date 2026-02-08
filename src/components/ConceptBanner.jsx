@@ -10,7 +10,7 @@ export default function ConceptBanner() {
 
   return (
     <div
-      className="relative z-[100] bg-waten-ink text-white text-center py-2 px-4 text-sm"
+      className="relative z-[100] bg-waten-accent text-white text-center py-2 px-4 text-sm"
       role="banner"
     >
       <span>

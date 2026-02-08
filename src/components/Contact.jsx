@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-medium text-charcoal mb-1">Email</p>
-                <a href={`mailto:${WATEN_EMAIL}`} className="text-waten-ink hover:underline">
+                <a href={`mailto:${WATEN_EMAIL}`} className="text-waten-accent hover:underline">
                   {WATEN_EMAIL}
                 </a>
               </div>
@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
           <div>
             {submitted ? (
-              <div className="p-8 bg-waten-tan/50 border border-waten-stone text-center">
+              <div className="p-8 bg-waten-card border border-waten-stone text-center">
                 <p className="font-serif text-xl text-charcoal mb-2">Thank you.</p>
                 <p className="text-muted">
                   We've received your message and will be in touch shortly.
@@ -58,7 +58,7 @@ export default function Contact() {
                       id="firstName"
                       name="firstName"
                       required
-                      className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-waten-bg border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
                       placeholder="First name"
                     />
                   </div>
@@ -71,7 +71,7 @@ export default function Contact() {
                       id="lastName"
                       name="lastName"
                       required
-                      className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-waten-bg border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
                       placeholder="Last name"
                     />
                   </div>
@@ -85,7 +85,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-waten-bg border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -97,13 +97,13 @@ export default function Contact() {
                     id="message"
                     name="message"
                     rows={5}
-                    className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-waten-bg border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors resize-none"
                     placeholder="Your message or inquiry..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-10 py-4 bg-waten-ink text-white font-medium hover:bg-charcoal transition-colors"
+                  className="w-full sm:w-auto px-10 py-4 bg-waten-accent text-white font-medium hover:bg-waten-ink transition-colors"
                 >
                   Send message
                 </button>

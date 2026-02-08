@@ -20,7 +20,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <>
-      <section className="py-16 bg-waten-tan text-waten-ink">
+      <section className="py-16 bg-waten-card text-waten-ink">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
             Ready to elevate your space?
@@ -36,7 +36,7 @@ export default function Footer() {
           </a>
         </div>
       </section>
-      <footer className="py-12 bg-waten-ink text-stone-400">
+      <footer className="py-12 bg-waten-accent text-stone-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
             <div className="lg:col-span-2">

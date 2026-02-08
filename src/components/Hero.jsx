@@ -23,13 +23,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
-            className="inline-flex items-center justify-center px-8 py-4 bg-waten-ink text-white font-medium hover:bg-charcoal transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-waten-accent text-white font-medium hover:bg-waten-ink transition-colors"
           >
             Explore Projects
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 border-2 border-waten-ink text-waten-ink font-medium hover:bg-waten-ink hover:text-white transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 border-2 border-waten-accent text-waten-accent font-medium hover:bg-waten-accent hover:text-white transition-colors"
           >
             Contact Us for Investment Opportunities
           </a>

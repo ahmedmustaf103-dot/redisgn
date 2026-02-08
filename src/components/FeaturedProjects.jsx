@@ -53,7 +53,7 @@ export default function FeaturedProjects() {
   }, [searchQuery, cityFilter, typeFilter, statusFilter]);
 
   return (
-    <section id="projects" className="py-24 lg:py-32 bg-white">
+    <section id="projects" className="py-24 lg:py-32 bg-waten-bg">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-4">
@@ -76,7 +76,7 @@ export default function FeaturedProjects() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search by project name or location..."
-            className="w-full px-4 py-3 bg-cream border border-stone-300 text-charcoal placeholder:text-muted focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none rounded"
+            className="w-full px-4 py-3 bg-waten-card border border-stone-300 text-charcoal placeholder:text-muted focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none rounded"
             aria-label="Search properties"
           />
         </div>
@@ -86,7 +86,7 @@ export default function FeaturedProjects() {
           <select
             value={cityFilter}
             onChange={(e) => setCityFilter(e.target.value)}
-            className="px-4 py-2 bg-cream border border-stone-300 text-charcoal text-sm focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none rounded"
+            className="px-4 py-2 bg-waten-card border border-stone-300 text-charcoal text-sm focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none rounded"
             aria-label="Filter by city"
           >
             {cities.map((c) => (
@@ -96,7 +96,7 @@ export default function FeaturedProjects() {
           <select
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
-            className="px-4 py-2 bg-cream border border-stone-300 text-charcoal text-sm focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none rounded"
+            className="px-4 py-2 bg-waten-card border border-stone-300 text-charcoal text-sm focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none rounded"
             aria-label="Filter by type"
           >
             {types.map((t) => (
@@ -106,7 +106,7 @@ export default function FeaturedProjects() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="px-4 py-2 bg-cream border border-stone-300 text-charcoal text-sm focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none rounded"
+            className="px-4 py-2 bg-waten-card border border-stone-300 text-charcoal text-sm focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none rounded"
             aria-label="Filter by status"
           >
             {statuses.map((s) => (
@@ -119,7 +119,7 @@ export default function FeaturedProjects() {
           {filtered.map((project, i) => (
             <article
               key={i}
-              className="group bg-cream overflow-hidden border border-stone-200/80 hover:border-waten-ink/30 transition-colors"
+              className="group bg-waten-card overflow-hidden border border-stone-200/80 hover:border-waten-ink/30 transition-colors"
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
                 <div className="aspect-[4/3] overflow-hidden relative">
@@ -131,14 +131,14 @@ export default function FeaturedProjects() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                    <span className="px-2 py-1 bg-waten-ink/90 text-white text-xs font-medium rounded">
+                    <span className="px-2 py-1 bg-waten-accent/90 text-white text-xs font-medium rounded">
                       {project.location}
                     </span>
                     <span className="px-2 py-1 bg-white/90 text-charcoal text-xs font-medium rounded">
                       {project.type}
                     </span>
                     <span className={`px-2 py-1 text-xs font-medium rounded ${
-                      project.status === 'Completed' ? 'bg-waten-ink/90 text-white' : 'bg-amber-600/90 text-white'
+                      project.status === 'Completed' ? 'bg-waten-accent/90 text-white' : 'bg-amber-600/90 text-white'
                     }`}>
                       {project.status}
                     </span>
@@ -155,7 +155,7 @@ export default function FeaturedProjects() {
                     <span>·</span>
                     <span>{project.status}</span>
                   </div>
-                  <span className="inline-flex items-center text-waten-muted font-medium hover:underline">
+                  <span className="inline-flex items-center text-waten-accent font-medium hover:underline">
                     Read more →
                   </span>
                 </div>
