@@ -14,12 +14,13 @@ export default {
         cream: '#F8F6F3',
         charcoal: '#1A1A1A',
         muted: '#6B6B6B',
-        // Waten brand — update with exact hex from waten.com if provided
+        // Waten brand — neutral palette from official waten.com (beige, tan, black)
         waten: {
-          dark: '#0D2E24',
-          green: '#1B4D3E',
-          accent: '#2D6A5C',
-          light: '#E8F0EE',
+          bg: '#F8F6F3',
+          tan: '#E8E4DF',
+          stone: '#D4CFC8',
+          ink: '#1A1A1A',
+          muted: '#5C5C5C',
         },
       },
     },

@@ -39,11 +39,11 @@ export default function FAQ() {
                 {faq.q}
                 <span className="flex-shrink-0 ml-2">
                   {open === i ? (
-                    <svg className="w-5 h-5 text-waten-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-waten-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                     </svg>
                   ) : (
-                    <svg className="w-5 h-5 text-waten-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-waten-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   )}

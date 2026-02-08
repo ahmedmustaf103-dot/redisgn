@@ -16,7 +16,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           <div>
-            <p className="uppercase tracking-[0.2em] text-waten-accent text-sm font-medium mb-4">
+            <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-4">
               Contact
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium leading-tight mb-6">
@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-medium text-charcoal mb-1">Email</p>
-                <a href={`mailto:${WATEN_EMAIL}`} className="text-waten-accent hover:underline">
+                <a href={`mailto:${WATEN_EMAIL}`} className="text-waten-ink hover:underline">
                   {WATEN_EMAIL}
                 </a>
               </div>
@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
           <div>
             {submitted ? (
-              <div className="p-8 bg-waten-light/50 border border-waten-accent/30 text-center">
+              <div className="p-8 bg-waten-tan/50 border border-waten-stone text-center">
                 <p className="font-serif text-xl text-charcoal mb-2">Thank you.</p>
                 <p className="text-muted">
                   We've received your message and will be in touch shortly.
@@ -58,7 +58,7 @@ export default function Contact() {
                       id="firstName"
                       name="firstName"
                       required
-                      className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
                       placeholder="First name"
                     />
                   </div>
@@ -71,7 +71,7 @@ export default function Contact() {
                       id="lastName"
                       name="lastName"
                       required
-                      className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
                       placeholder="Last name"
                     />
                   </div>
@@ -85,7 +85,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -97,13 +97,13 @@ export default function Contact() {
                     id="message"
                     name="message"
                     rows={5}
-                    className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-accent focus:ring-1 focus:ring-waten-accent outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-cream border border-stone-300 focus:border-waten-ink focus:ring-1 focus:ring-waten-ink outline-none transition-colors resize-none"
                     placeholder="Your message or inquiry..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-10 py-4 bg-waten-accent text-white font-medium hover:bg-waten-green transition-colors"
+                  className="w-full sm:w-auto px-10 py-4 bg-waten-ink text-white font-medium hover:bg-charcoal transition-colors"
                 >
                   Send message
                 </button>

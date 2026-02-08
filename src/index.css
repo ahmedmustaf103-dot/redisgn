@@ -10,8 +10,8 @@ body {
   @apply font-sans text-charcoal antialiased;
 }
 
-/* Focus visible for keyboard/screen reader users (Waten accent) */
+/* Focus visible for keyboard/screen reader users */
 :focus-visible {
-  outline: 2px solid #2D6A5C;
+  outline: 2px solid #1A1A1A;
   outline-offset: 2px;
 }

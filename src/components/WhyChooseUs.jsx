@@ -39,19 +39,16 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-waten" className="relative py-24 lg:py-32 bg-waten-dark text-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-waten-green/10 via-transparent to-waten-dark" aria-hidden="true" />
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-waten-accent/5 to-transparent" aria-hidden="true" />
-
+    <section id="why-waten" className="relative py-24 lg:py-32 bg-waten-tan text-waten-ink overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6">
         <header className="text-center max-w-2xl mx-auto mb-16">
-          <p className="uppercase tracking-[0.25em] text-waten-accent text-xs font-medium mb-4">
+          <p className="uppercase tracking-[0.25em] text-waten-muted text-xs font-medium mb-4">
             Why Waten?
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-4">
             Benefit-Driven Results
           </h2>
-          <p className="text-stone-400 text-lg leading-relaxed">
+          <p className="text-waten-muted text-lg leading-relaxed">
             We deliver more than buildings — transparency, quality, and innovation at every step.
           </p>
         </header>
@@ -60,16 +57,16 @@ export default function WhyChooseUs() {
           {benefits.map((benefit, i) => (
             <article
               key={i}
-              className="group flex gap-6 p-8 lg:p-10 bg-white/[0.04] border border-white/10 hover:border-waten-accent/50 hover:bg-white/[0.06] transition-all duration-300 rounded-lg"
+              className="group flex gap-6 p-8 lg:p-10 bg-waten-bg border border-waten-stone hover:border-waten-ink/30 transition-all duration-300 rounded-lg"
             >
-              <div className="flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-waten-accent/20 flex items-center justify-center text-waten-light group-hover:bg-waten-accent group-hover:text-white transition-colors duration-300">
+              <div className="flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-waten-ink/10 flex items-center justify-center text-waten-ink group-hover:bg-waten-ink group-hover:text-white transition-colors duration-300">
                 {benefit.icon}
               </div>
               <div className="min-w-0">
-                <h3 className="font-serif text-xl lg:text-2xl font-medium text-white mb-2">
+                <h3 className="font-serif text-xl lg:text-2xl font-medium text-waten-ink mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-stone-400 text-sm lg:text-base leading-relaxed">
+                <p className="text-waten-muted text-sm lg:text-base leading-relaxed">
                   {benefit.copy}
                 </p>
               </div>

@@ -22,7 +22,7 @@ export default function Team() {
     <section id="team" className="py-24 lg:py-32 bg-cream">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="uppercase tracking-[0.2em] text-waten-accent text-sm font-medium mb-4">
+          <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-4">
             The Team
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium leading-tight mb-4">

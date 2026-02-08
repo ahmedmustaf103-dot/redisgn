@@ -20,33 +20,33 @@ const socialLinks = [
 export default function Footer() {
   return (
     <>
-      <section className="py-16 bg-waten-green text-white">
+      <section className="py-16 bg-waten-tan text-waten-ink">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
             Ready to elevate your space?
           </h2>
-          <p className="text-waten-light/90 mb-8 max-w-xl mx-auto">
+          <p className="text-waten-muted mb-8 max-w-xl mx-auto">
             Get in touch to discuss your next project or learn more about our developments.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-waten-accent text-white font-medium hover:bg-waten-light hover:text-waten-dark transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-waten-ink text-white font-medium hover:bg-charcoal transition-colors"
           >
             Contact us
           </a>
         </div>
       </section>
-      <footer className="py-12 bg-waten-dark text-stone-400">
+      <footer className="py-12 bg-waten-ink text-stone-400">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
             <div className="lg:col-span-2">
               <img
                 src={LOGO_URL}
                 alt="Waten Real Estate"
-                className="h-8 w-auto object-contain opacity-90 mb-4"
+                className="h-8 w-auto object-contain opacity-90 mb-4 brightness-0 invert"
               />
               <p className="text-sm mb-2">{WATEN_ADDRESS}</p>
-              <a href={`mailto:${WATEN_EMAIL}`} className="text-waten-light/90 hover:text-waten-accent transition-colors text-sm">
+              <a href={`mailto:${WATEN_EMAIL}`} className="text-stone-300 hover:text-white transition-colors text-sm">
                 {WATEN_EMAIL}
               </a>
             </div>
@@ -55,7 +55,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {footerLinks.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="text-sm hover:text-waten-accent transition-colors">
+                    <a href={link.href} className="text-sm text-stone-400 hover:text-white transition-colors">
                       {link.label}
                     </a>
                   </li>
@@ -71,7 +71,7 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-stone-400 hover:text-waten-accent transition-colors"
+                    className="text-stone-400 hover:text-white transition-colors"
                     aria-label={link.label}
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

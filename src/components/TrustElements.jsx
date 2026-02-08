@@ -33,7 +33,7 @@ export default function TrustElements() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {metrics.map((m, i) => (
             <div key={i} className="text-center">
-              <p className="font-serif text-4xl md:text-5xl text-waten-accent font-medium mb-1">{m.value}</p>
+              <p className="font-serif text-4xl md:text-5xl text-waten-ink font-medium mb-1">{m.value}</p>
               <p className="text-muted text-sm md:text-base">{m.label}</p>
             </div>
           ))}

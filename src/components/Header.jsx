@@ -15,7 +15,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-waten-dark/95 backdrop-blur-sm border-b border-waten-green/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-waten-bg/95 backdrop-blur-sm border-b border-waten-stone">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#" className="flex items-center gap-2">
@@ -30,7 +30,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-stone-200 hover:text-waten-accent transition-colors text-sm uppercase tracking-wider"
+                className="text-waten-ink hover:underline transition-colors text-sm uppercase tracking-wider"
               >
                 {link.label}
               </a>
@@ -38,7 +38,7 @@ export default function Header() {
           </nav>
           <button
             type="button"
-            className="md:hidden p-2 text-white"
+            className="md:hidden p-2 text-waten-ink"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -54,12 +54,12 @@ export default function Header() {
           </button>
         </div>
         {open && (
-          <nav className="md:hidden py-4 border-t border-waten-green/30 flex flex-col gap-4">
+          <nav className="md:hidden py-4 border-t border-waten-stone flex flex-col gap-4">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-stone-200 hover:text-waten-accent transition-colors text-sm uppercase tracking-wider"
+                className="text-waten-ink hover:underline transition-colors text-sm uppercase tracking-wider"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
