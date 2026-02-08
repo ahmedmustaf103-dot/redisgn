@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-charcoal antialiased;
+}
+
+/* Focus visible for keyboard/screen reader users (Waten accent) */
+:focus-visible {
+  outline: 2px solid #2D6A5C;
+  outline-offset: 2px;
+}
