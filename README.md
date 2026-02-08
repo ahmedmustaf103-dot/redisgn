@@ -77,3 +77,13 @@ npm run preview
 ```
 
 Output is in `dist/` (e.g. for Vercel/Netlify).
+
+---
+
+## Deploy on Vercel
+
+1. Go to **[vercel.com](https://vercel.com)** and sign in (GitHub).
+2. Click **Add New** → **Project** and import **ahmedmustaf103-dot/redisgn** (or your fork).
+3. Leave settings as-is (Vercel detects Vite; `vercel.json` sets build and output).
+4. Click **Deploy**. Your site will be at `https://redisgn-xxx.vercel.app` (or a custom name you set).
+5. Put that URL in **PROPOSAL.md** and in your email to Waten.
