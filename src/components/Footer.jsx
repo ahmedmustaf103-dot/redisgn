@@ -1,14 +1,16 @@
+import { useLanguage } from '../context/LanguageContext';
+
 const WATEN_EMAIL = 'Hello@waten.com';
 const WATEN_ADDRESS = 'Office 22 9 Sercon Building, Musa Ibn Nusair St., Olaya, Riyadh';
 const LOGO_URL = 'https://images.squarespace-cdn.com/content/v1/679a478f72e1ff7f9f77d1f0/33f121b8-3f79-4c4e-b9e1-9c7f16954dd4/Waten---Logo-.png?format=1500w';
 
 const footerLinks = [
-  { href: '#about', label: 'About us' },
-  { href: '#projects', label: 'Portfolio' },
-  { href: '#why-waten', label: 'Why Waten' },
-  { href: '#team', label: 'The Team' },
-  { href: '#contact', label: 'Contact' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '#about', labelKey: 'nav.about' },
+  { href: '#projects', labelKey: 'nav.portfolio' },
+  { href: '#why-waten', labelKey: 'nav.whyWaten' },
+  { href: '#team', labelKey: 'nav.team' },
+  { href: '#contact', labelKey: 'nav.contact' },
+  { href: '#faq', labelKey: 'nav.faq' },
 ];
 
 const socialLinks = [
@@ -18,21 +20,23 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <>
       <section className="py-16 bg-waten-card text-waten-ink">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-            Ready to elevate your space?
+            {t('footer.ready')}
           </h2>
           <p className="text-waten-muted mb-8 max-w-xl mx-auto">
-            Get in touch to discuss your next project or learn more about our developments.
+            {t('footer.sub')}
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-waten-ink text-white font-medium hover:bg-charcoal transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-waten-accent text-white font-medium hover:bg-waten-ink transition-colors"
           >
-            Contact us
+            {t('footer.contactUs')}
           </a>
         </div>
       </section>
@@ -51,19 +55,19 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <h3 className="text-white font-medium mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
+              <h3 className="text-white font-medium mb-4 text-sm uppercase tracking-wider">{t('footer.quickLinks')}</h3>
               <ul className="space-y-2">
                 {footerLinks.map((link) => (
                   <li key={link.href}>
                     <a href={link.href} className="text-sm text-stone-400 hover:text-white transition-colors">
-                      {link.label}
+                      {t(link.labelKey)}
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-white font-medium mb-4 text-sm uppercase tracking-wider">Follow Us</h3>
+              <h3 className="text-white font-medium mb-4 text-sm uppercase tracking-wider">{t('footer.followUs')}</h3>
               <div className="flex gap-4">
                 {socialLinks.map((link) => (
                   <a

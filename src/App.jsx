@@ -1,6 +1,7 @@
 import ConceptBanner from './components/ConceptBanner';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import BeforeAfter from './components/BeforeAfter';
 import About from './components/About';
 import FeaturedProjects from './components/FeaturedProjects';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -24,6 +25,7 @@ export default function App() {
         <TrustElements />
         <Team />
         <Contact />
+        <BeforeAfter />
         <FAQ />
       </main>
       <Footer />

@@ -1,6 +1,8 @@
 # Concept Redesign — Waten Real Estate
 
-**Live preview:** [Add your deployed link here]
+**Live preview:** [Add your Vercel URL, e.g. https://redisgn-five.vercel.app]
+
+---
 
 A responsive concept redesign of [waten.com](https://www.waten.com/) built with React and Tailwind CSS. The goal was to keep your brand, message, and content while improving structure, clarity, and conversion.
 
@@ -8,43 +10,48 @@ A responsive concept redesign of [waten.com](https://www.waten.com/) built with 
 
 ## What stayed the same
 
-- **Branding** — Your logo, tagline (“Urban Spaces, Elevated.”), and header imagery
-- **Copy** — All existing messaging: Saudi-based, commercial & residential, excellence, sustainability, transparency, quality, innovation
-- **Projects** — Murabbaa Residence, Plaza Dan, Princess Sara, with links to your current project pages
+- **Branding** — Logo, tagline (“Urban Spaces, Elevated.”), header imagery
+- **Copy** — Saudi-based, commercial & residential, excellence, sustainability, transparency, quality, innovation
+- **Projects** — Murabbaa Residence, Plaza Dan, Princess Sara (links to your project pages)
 - **Contact** — Olaya office address and Hello@waten.com
 
 ---
 
 ## What was improved
 
-1. **The Team** — A dedicated section for your team (currently placeholders). Your current site has “The Team” in the nav; this gives it a clear home and makes it easy to add real names and photos later.
-
-2. **Clear next step** — A footer strip (“Ready to elevate your space?”) with a Contact CTA so visitors have an obvious action before they leave.
-
-3. **Layout and hierarchy** — Clear sections, consistent spacing, and a single-column flow so the story (who you are → what you do → projects → why you → team → contact) is easy to follow on mobile and desktop.
-
-4. **Contact** — Address and email shown next to the form so visitors can reach you even without submitting.
+1. **Hero** — Stronger value proposition + primary CTAs (“Explore Projects”, “Contact Us for Investment Opportunities”)
+2. **Why Waten** — Benefit-driven section with icons, placed under hero
+3. **The Team** — Dedicated section (placeholder for real names/photos)
+4. **Featured Projects** — Location tags, type/status metadata, filter UI (city/type/status), property search bar
+5. **Trust elements** — Company metrics (15+ years, 12+ projects), testimonials, partner logos placeholder
+6. **Arabic / RTL** — Language toggle; key sections translated
+7. **Floating CTA** — “Contact Us” button appears on scroll
+8. **Sticky header** — Fixed nav with brand colours
+9. **Contact form** — Wired to Formspree (add env var to receive submissions)
+10. **Exact brand palette** — #E9E1D2, #F5F1E8, #111111, #3A332A
 
 ---
 
 ## Tech stack
 
-- **React** + **Vite** — Fast, modern front end
-- **Tailwind CSS** — Easy for your team or a developer to adjust styling and branding
-- **Static build** — Can be hosted on Vercel, Netlify, or any host; no backend required for the current form (can be wired to your email or CRM later)
+- **React + Vite** — Fast, modern front end
+- **Tailwind CSS** — Easy to adjust styling and branding
+- **Static build** — Host on Vercel, Netlify, or any host
+- **Formspree** — Contact form sends to your email (add `VITE_FORMSPREE_ID` in env)
 
 ---
 
 ## Next steps I can help with
 
-- **Hand off** — Clean codebase, README, and optional call to walk your team through structure and how to edit content
-- **Deploy** — Get this live on a URL you can share (e.g. waten-redesign.vercel.app or a subdomain you prefer)
-- **Content** — Swap in real team photos and bios, or tweak copy to match your latest positioning
-- **Arabic / RTL** — Add Arabic and right-to-left layout if you want the site to be bilingual
+- **Hand off** — Clean codebase, README, optional call to walk your team through structure
+- **Deploy** — Live on a URL you can share (e.g. waten.com subdomain)
+- **Content** — Swap in real team photos, partner logos, refine Arabic copy
+- **Analytics** — Set up GTM/GA4 for form submits and CTA clicks
+- **Ongoing support** — Trial period or retainer to iterate based on feedback
 
 ---
 
-*This is an unsolicited concept redesign to show how a refreshed structure could support Waten’s growth. I’m happy to discuss how we can work together.*
+*This is an unsolicited concept redesign to show how a refreshed structure could support Waten's growth. I’m happy to discuss how we can work together.*
 
 **[Your name]**  
 **[Your email]**  
