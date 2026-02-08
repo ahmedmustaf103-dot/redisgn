@@ -9,6 +9,7 @@ export default function Header() {
     { href: '#', label: 'Home' },
     { href: '#projects', label: 'Portfolio' },
     { href: '#about', label: 'About us' },
+    { href: '#why-waten', label: 'Why Waten' },
     { href: '#team', label: 'The Team' },
     { href: '#contact', label: 'Contact' },
   ];

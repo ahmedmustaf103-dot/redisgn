@@ -9,27 +9,32 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-waten-dark/70" />
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+        <p className="uppercase tracking-[0.25em] text-waten-light/90 text-xs font-medium mb-4">
+          Saudi Arabia · Urban Development
+        </p>
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium leading-tight mb-6">
           Urban Spaces,
           <br />
           <span className="text-waten-light">Elevated.</span>
         </h1>
-        <p className="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto mb-10">
-          <strong className="text-white">Waten Real Estate</strong> is a real estate development company based in{' '}
-          <strong className="text-white">Saudi Arabia</strong>, dedicated to enhancing urban landscapes with high-quality, thoughtfully designed properties.
+        <p className="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto mb-4">
+          High-quality commercial and residential developments across the Kingdom.
+        </p>
+        <p className="text-stone-300 text-base max-w-xl mx-auto mb-10">
+          <strong className="text-white">Waten Real Estate</strong> delivers thoughtfully designed properties that enrich the architectural scene in Riyadh, Makkah, and beyond — with transparency, quality, and innovation at the core.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
             className="inline-flex items-center justify-center px-8 py-4 bg-waten-accent text-white font-medium hover:bg-waten-green transition-colors"
           >
-            View Projects
+            Explore Projects
           </a>
           <a
             href="#contact"
             className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-medium hover:bg-white hover:text-waten-dark transition-colors"
           >
-            Get in Touch
+            Contact Us
           </a>
         </div>
       </div>
