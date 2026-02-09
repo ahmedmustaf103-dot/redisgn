@@ -8,6 +8,11 @@ html {
 
 body {
   @apply font-sans text-charcoal antialiased;
+  background-color: #E9E1D2;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 /* Focus visible for keyboard/screen reader users */

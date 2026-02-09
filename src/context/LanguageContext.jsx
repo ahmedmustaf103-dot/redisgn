@@ -20,10 +20,13 @@ const translations = {
 };
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState(() => localStorage.getItem('waten-lang') || 'en');
+  const [lang, setLang] = useState(() => {
+    if (typeof localStorage === 'undefined') return 'en';
+    return localStorage.getItem('waten-lang') || 'en';
+  });
 
   useEffect(() => {
-    localStorage.setItem('waten-lang', lang);
+    if (typeof localStorage !== 'undefined') localStorage.setItem('waten-lang', lang);
     document.documentElement.setAttribute('lang', lang);
     document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
   }, [lang]);
