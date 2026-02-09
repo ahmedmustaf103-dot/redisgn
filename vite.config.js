@@ -5,8 +5,8 @@ export default defineConfig({
   base: '/',
   plugins: [react()],
   server: {
-    host: true,        // listen on 0.0.0.0 so localhost and 127.0.0.1 both work
+    host: '127.0.0.1',
     port: 5173,
-    strictPort: false,  // try next port if 5173 is in use
+    strictPort: false,
   },
 })

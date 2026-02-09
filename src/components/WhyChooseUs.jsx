@@ -1,3 +1,14 @@
+// One featured project image for Why Waten (Murabaa – residential quality)
+const WHY_IMAGE = 'https://images.squarespace-cdn.com/content/v1/679a478f72e1ff7f9f77d1f0/7442b059-a70b-473f-b7f6-17e55af7f1b7/Untitled-52-gigapixel-high+fidelity+v2-2x.jpeg';
+
+// Different from TrustElements (15+, 12+, 3, 100%) and About (19k sqm, 74+, 57+) — process/outcome focused
+const proofStats = [
+  { value: 'On budget', label: 'Delivery track record' },
+  { value: 'Zero', label: 'Hidden fees' },
+  { value: 'Commercial & Residential', label: 'Both sectors' },
+  { value: 'End-to-end', label: 'Concept to handover' },
+];
+
 const benefits = [
   {
     title: 'Transparent Process',
@@ -39,31 +50,47 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-waten" className="relative py-24 lg:py-32 bg-waten-card text-waten-ink overflow-hidden">
+    <section id="why-waten" className="relative py-24 lg:py-32 bg-waten-bg text-waten-ink overflow-hidden">
+      {/* Subtle top border for separation */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-waten-accent/30 to-transparent" aria-hidden="true" />
+
       <div className="relative max-w-7xl mx-auto px-6">
-        <header className="text-center max-w-2xl mx-auto mb-16">
-          <p className="uppercase tracking-[0.25em] text-waten-muted text-xs font-medium mb-4">
+        <header className="text-center max-w-2xl mx-auto mb-14">
+          <p className="uppercase tracking-[0.2em] text-waten-accent text-xs font-semibold mb-3">
             Why Waten?
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight text-charcoal mb-4">
             Benefit-Driven Results
           </h2>
+          <div className="w-12 h-0.5 bg-waten-accent/50 mx-auto mb-6" aria-hidden="true" />
           <p className="text-waten-muted text-lg leading-relaxed">
             We deliver more than buildings — transparency, quality, and innovation at every step.
           </p>
         </header>
 
+        {/* Social proof stats */}
+        <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 mb-20">
+          {proofStats.map((s, i) => (
+            <div key={i} className="flex flex-col items-center text-center">
+              <span className="font-serif text-3xl md:text-4xl text-waten-accent font-medium tabular-nums">{s.value}</span>
+              <span className="text-waten-muted text-sm mt-1 max-w-[120px]">{s.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Benefit cards */}
         <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
           {benefits.map((benefit, i) => (
             <article
               key={i}
-              className="group flex gap-6 p-8 lg:p-10 bg-waten-bg border border-waten-stone hover:border-waten-accent/40 transition-all duration-300 rounded-lg"
+              className="group relative flex gap-6 p-8 lg:p-10 bg-waten-card border border-waten-stone/80 rounded-xl shadow-sm hover:shadow-md hover:border-waten-accent/30 transition-all duration-300 overflow-hidden"
             >
-              <div className="flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-waten-accent/20 flex items-center justify-center text-waten-ink group-hover:bg-waten-accent group-hover:text-white transition-colors duration-300">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-waten-accent/20 group-hover:bg-waten-accent transition-colors duration-300" aria-hidden="true" />
+              <div className="flex-shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-waten-accent/10 flex items-center justify-center text-waten-accent group-hover:bg-waten-accent group-hover:text-white transition-all duration-300">
                 {benefit.icon}
               </div>
-              <div className="min-w-0">
-                <h3 className="font-serif text-xl lg:text-2xl font-medium text-waten-ink mb-2">
+              <div className="min-w-0 pl-1">
+                <h3 className="font-serif text-xl lg:text-2xl font-medium text-charcoal mb-2">
                   {benefit.title}
                 </h3>
                 <p className="text-waten-muted text-sm lg:text-base leading-relaxed">
@@ -72,6 +99,24 @@ export default function WhyChooseUs() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Featured project image — quality in practice */}
+        <div className="mt-16 max-w-3xl mx-auto">
+          <a
+            href="#/project/murabbaa-residence"
+            className="block rounded-xl overflow-hidden border border-waten-stone/80 hover:border-waten-accent/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-waten-accent focus-visible:ring-offset-2"
+          >
+            <div className="aspect-[16/10] overflow-hidden bg-waten-stone">
+              <img
+                src={WHY_IMAGE}
+                alt="Murabaa Residence — Riyadh"
+                loading="lazy"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <p className="p-4 text-center text-sm text-waten-muted font-medium">Murabaa Residence — Riyadh · View project →</p>
+          </a>
         </div>
       </div>
     </section>

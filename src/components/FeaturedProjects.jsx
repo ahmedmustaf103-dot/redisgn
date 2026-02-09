@@ -1,36 +1,7 @@
 import { useState, useMemo } from 'react';
+import { projects } from '../data/projects';
 
 const ALL = 'all';
-
-const projects = [
-  {
-    title: 'Murabbaa Residence',
-    city: 'Riyadh',
-    location: 'Riyadh, Saudi Arabia',
-    type: 'Residential',
-    status: 'Completed',
-    link: 'https://www.waten.com/cultural-center',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    title: 'Plaza Dan',
-    city: 'Makkah',
-    location: 'Makkah, Awali District — Saudi Arabia',
-    type: 'Commercial',
-    status: 'In Progress',
-    link: 'https://www.waten.com/greenspacing',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    title: 'Princess Sara',
-    city: 'Riyadh',
-    location: 'Riyadh, Saudi Arabia',
-    type: 'Residential',
-    status: 'Completed',
-    link: 'https://www.waten.com/portfolio/princess-sara',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop',
-  },
-];
 
 const cities = [ALL, ...new Set(projects.map((p) => p.city))];
 const types = [ALL, ...new Set(projects.map((p) => p.type))];
@@ -118,10 +89,10 @@ export default function FeaturedProjects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {filtered.map((project, i) => (
             <article
-              key={i}
+              key={project.slug}
               className="group bg-waten-card overflow-hidden border border-stone-200/80 hover:border-waten-ink/30 transition-colors"
             >
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+              <a href={`#/project/${project.slug}`} className="block">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     src={project.image}
@@ -156,7 +127,7 @@ export default function FeaturedProjects() {
                     <span>{project.status}</span>
                   </div>
                   <span className="inline-flex items-center text-waten-accent font-medium hover:underline">
-                    Read more →
+                    View project →
                   </span>
                 </div>
               </a>

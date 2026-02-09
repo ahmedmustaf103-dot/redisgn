@@ -18,12 +18,8 @@ const testimonials = [
   },
 ];
 
-const partners = [
-  // Placeholder — replace with real partner logo URLs
-  { name: 'Partner 1', logo: null },
-  { name: 'Partner 2', logo: null },
-  { name: 'Partner 3', logo: null },
-];
+const CDN = 'https://images.squarespace-cdn.com/content/v1/679a478f72e1ff7f9f77d1f0';
+const TRUST_IMAGE = `${CDN}/1738250935690-J3HFE52N7OIVNMBPSH7B/Artboard+1+copy+12.jpg`;
 
 export default function TrustElements() {
   return (
@@ -57,16 +53,22 @@ export default function TrustElements() {
           </div>
         </div>
 
-        {/* Partner Logos (placeholder — add real logos when available) */}
+        {/* Project image */}
         <div className="pt-12 border-t border-stone-200">
-          <p className="text-center text-muted text-sm mb-8">Trusted by leading partners across the Kingdom</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
-            {partners.map((p, i) => (
-              <div key={i} className="w-24 h-12 flex items-center justify-center bg-stone-200/80 rounded text-muted text-xs">
-                {p.logo ? <img src={p.logo} alt={p.name} className="max-h-8 w-auto" /> : p.name}
-              </div>
-            ))}
-          </div>
+          <a
+            href="#/project/plaza-dan"
+            className="block rounded-xl overflow-hidden border border-waten-stone/80 hover:border-waten-accent/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-waten-accent focus-visible:ring-offset-2"
+          >
+            <div className="aspect-[21/9] max-h-64 overflow-hidden bg-waten-stone">
+              <img
+                src={TRUST_IMAGE}
+                alt="Plaza Dan — Makkah"
+                loading="lazy"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <p className="p-3 text-center text-muted text-sm font-medium">Plaza Dan — Makkah, Awali District</p>
+          </a>
         </div>
       </div>
     </section>

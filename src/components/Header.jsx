@@ -8,7 +8,7 @@ export default function Header() {
   const { lang, setLang, t } = useLanguage();
 
   const links = [
-    { href: '#', label: t('nav.home') },
+    { href: '#/', label: t('nav.home') },
     { href: '#projects', label: t('nav.portfolio') },
     { href: '#about', label: t('nav.about') },
     { href: '#why-waten', label: t('nav.whyWaten') },
@@ -20,11 +20,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-waten-bg/95 backdrop-blur-sm border-b border-waten-stone">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-2">
+          <a href="#/" className="flex items-center gap-2">
             <img
               src={LOGO_URL}
               alt="Waten Real Estate"
-              className="h-8 md:h-10 w-auto object-contain"
+              className="h-12 md:h-10 w-auto object-contain"
             />
           </a>
           <div className="flex items-center gap-4">

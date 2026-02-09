@@ -1,3 +1,13 @@
+const aboutProof = [
+  { value: '19,000+', label: 'sqm largest site' },
+  { value: '74+', label: 'residential units' },
+  { value: '57+', label: 'retail spaces delivered' },
+];
+
+// One featured project image for About (Plaza Dan – commercial)
+const CDN = 'https://images.squarespace-cdn.com/content/v1/679a478f72e1ff7f9f77d1f0';
+const ABOUT_IMAGE = `${CDN}/fece01d2-9e54-4b37-badd-cecfee0c772b/Artboard+1+copy+15.jpg`;
+
 export default function About() {
   const features = [
     {
@@ -48,6 +58,18 @@ export default function About() {
             </p>
             <p className="text-muted leading-relaxed">
               Guided by principles of transparency, quality, and innovation, we are building a reputation for delivering projects that enrich the architectural scene in the major cities of The Kingdom.
+            </p>
+            {/* Social proof by the numbers */}
+            <div className="flex flex-wrap gap-6 mt-8">
+              {aboutProof.map((s, i) => (
+                <div key={i} className="flex items-baseline gap-2">
+                  <span className="font-serif text-2xl md:text-3xl text-waten-accent font-medium">{s.value}</span>
+                  <span className="text-muted text-sm">{s.label}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted text-sm mt-6 italic">
+              Recognised for excellence in commercial and residential development across the Kingdom.
             </p>
           </div>
           <div className="grid gap-8">
