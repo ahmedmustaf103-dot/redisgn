@@ -24,22 +24,22 @@ export default function FeaturedProjects() {
   }, [searchQuery, cityFilter, typeFilter, statusFilter]);
 
   return (
-    <section id="projects" className="py-24 lg:py-32 bg-waten-bg">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-4">
-            Projects
+    <section id="projects" className="py-28 lg:py-36 bg-waten-bg">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-5">
+            Portfolio
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium leading-tight mb-4">
+          <h2 className="font-serif text-5xl md:text-6xl text-charcoal font-semibold leading-tight mb-6">
             Featured Projects
           </h2>
-          <p className="text-muted text-lg">
+          <p className="text-stone-600 text-lg leading-body max-w-xl mx-auto mt-2">
             Thoughtfully designed developments across the major cities of the Kingdom.
           </p>
         </div>
 
         {/* Property Search Bar */}
-        <div className="max-w-xl mx-auto mb-8">
+        <div className="max-w-xl mx-auto mb-10">
           <label htmlFor="property-search" className="sr-only">Search properties</label>
           <input
             id="property-search"
@@ -53,7 +53,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Filter UI */}
-        <div className="flex flex-wrap gap-3 justify-center mb-12">
+        <div className="flex flex-wrap gap-4 justify-center mb-14">
           <select
             value={cityFilter}
             onChange={(e) => setCityFilter(e.target.value)}
@@ -86,57 +86,55 @@ export default function FeaturedProjects() {
           </select>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {filtered.map((project, i) => (
-            <article
-              key={project.slug}
-              className="group bg-waten-card overflow-hidden border border-stone-200/80 hover:border-waten-ink/30 transition-colors"
-            >
-              <a href={`#/project/${project.slug}`} className="block">
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                    <span className="px-2 py-1 bg-waten-accent/90 text-white text-xs font-medium rounded">
-                      {project.location}
-                    </span>
-                    <span className="px-2 py-1 bg-white/90 text-charcoal text-xs font-medium rounded">
-                      {project.type}
-                    </span>
-                    <span className={`px-2 py-1 text-xs font-medium rounded ${
-                      project.status === 'Completed' ? 'bg-waten-accent/90 text-white' : 'bg-amber-600/90 text-white'
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+          {filtered.map((project) => {
+            const shortDesc = project.description ? project.description.slice(0, 90).trim() + (project.description.length > 90 ? '…' : '') : `${project.location} · ${project.type}`;
+            return (
+              <article
+                key={project.slug}
+                className="group overflow-hidden rounded-lg transition-all duration-300"
+              >
+                <a href={`#/project/${project.slug}`} className="block h-full">
+                  <div className="aspect-[4/5] overflow-hidden relative rounded-lg">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                    />
+                    {/* Dark gradient overlay at bottom — darkens on hover */}
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-all duration-300 ease-out group-hover:from-black/90 group-hover:via-black/30"
+                      aria-hidden="true"
+                    />
+                    {/* Title and description on top of image */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 pt-16 text-white">
+                      <h3 className="font-serif text-2xl md:text-3xl font-medium leading-tight mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-white/90 text-sm leading-relaxed mb-4 max-w-md">
+                        {shortDesc}
+                      </p>
+                      <span className="inline-flex items-center text-sm font-medium text-white/95 group-hover:text-white transition-colors duration-300">
+                        View project →
+                      </span>
+                    </div>
+                    {/* Status pill top-right */}
+                    <span className={`absolute top-4 right-4 px-3 py-1.5 text-xs font-medium rounded-full transition-colors duration-300 ${
+                      project.status === 'Completed' ? 'bg-waten-accent/95 text-white' : 'bg-amber-600/95 text-white'
                     }`}>
                       {project.status}
                     </span>
                   </div>
-                </div>
-                <div className="p-8">
-                  <p className="text-waten-muted text-sm font-medium mb-1">{project.city} — {project.type}</p>
-                  <h3 className="font-serif text-2xl text-charcoal font-medium mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted text-sm mb-3">{project.location}</p>
-                  <div className="flex gap-4 text-muted text-xs mb-4">
-                    <span>{project.type}</span>
-                    <span>·</span>
-                    <span>{project.status}</span>
-                  </div>
-                  <span className="inline-flex items-center text-waten-accent font-medium hover:underline">
-                    View project →
-                  </span>
-                </div>
-              </a>
-            </article>
-          ))}
+                </a>
+              </article>
+            );
+          })}
         </div>
 
         {filtered.length === 0 && (
-          <p className="text-center text-muted py-12">No projects match the selected filters.</p>
+          <p className="text-center text-stone-600 py-12">No projects match the selected filters.</p>
         )}
       </div>
     </section>

@@ -24,25 +24,25 @@ export default function Footer() {
 
   return (
     <>
-      <section className="py-16 bg-waten-card text-waten-ink">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
+      <section className="py-24 lg:py-28 bg-waten-card text-waten-ink">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-6">
             {t('footer.ready')}
           </h2>
-          <p className="text-waten-muted mb-8 max-w-xl mx-auto">
+          <p className="text-stone-600 leading-body mb-10 max-w-xl mx-auto">
             {t('footer.sub')}
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-waten-accent text-white font-medium hover:bg-waten-ink transition-colors"
+            className="btn-primary"
           >
             {t('footer.contactUs')}
           </a>
         </div>
       </section>
-      <footer className="py-12 bg-waten-accent text-stone-300">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+      <footer className="py-16 bg-waten-accent text-stone-300">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <div className="lg:col-span-2">
               <img
                 src={LOGO_URL}

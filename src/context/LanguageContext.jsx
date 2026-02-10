@@ -4,7 +4,7 @@ const LanguageContext = createContext({ lang: 'en', setLang: () => {}, t: () => 
 
 const translations = {
   en: {
-    nav: { home: 'Home', portfolio: 'Projects', about: 'About us', whyWaten: 'Why Waten', team: 'The Team', contact: 'Contact', faq: 'FAQ' },
+    nav: { home: 'Home', portfolio: 'Portfolio', about: 'About us', whyWaten: 'Why Waten', team: 'The Team', contact: 'Contact', faq: 'FAQ' },
     hero: { headline: 'Urban Spaces,', elevated: 'Elevated.', subline: 'Premium Saudi Residential & Commercial Developments', intro: 'Waten Real Estate delivers thoughtfully designed properties across the Kingdom — with transparency, quality, and innovation at the core.', explore: 'Explore Projects', cta: 'Contact Us for Investment Opportunities' },
     footer: { ready: 'Ready to elevate your space?', sub: 'Get in touch to discuss your next project or learn more about our developments.', contactUs: 'Contact us', quickLinks: 'Quick Links', followUs: 'Follow Us' },
     contact: { title: 'Get in Touch', intro: 'Reach out for inquiries about our projects or to discuss your next development.', office: 'Office', email: 'Email', firstName: 'First name', lastName: 'Last name', message: 'Message', send: 'Send message', thanks: 'Thank you.', received: "We've received your message and will be in touch shortly." },

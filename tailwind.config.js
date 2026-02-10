@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,css}",
   ],
   theme: {
     extend: {
@@ -22,7 +22,11 @@ export default {
           ink: '#111111',     // Primary text / headings
           muted: '#5C5C5C',   // Secondary text
           accent: '#3A332A',  // Deep brown — buttons, hover, footer
+          'accent-hover': '#2d2822',  // Slight darken for button hover
         },
+      },
+      lineHeight: {
+        body: '1.75',
       },
     },
   },

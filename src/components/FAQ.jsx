@@ -19,12 +19,13 @@ export default function FAQ() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="faq" className="py-24 lg:py-32 bg-waten-bg">
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium text-center mb-12">
+    <section id="faq" className="py-28 lg:py-36 bg-waten-bg">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-3xl mx-auto">
+        <h2 className="font-serif text-5xl md:text-6xl text-charcoal font-semibold text-center mb-16">
           FAQ
         </h2>
-        <div className="space-y-2">
+        <div className="space-y-4">
           {faqs.map((faq, i) => (
             <div
               key={i}
@@ -33,7 +34,7 @@ export default function FAQ() {
               <button
                 type="button"
                 onClick={() => setOpen(open === i ? -1 : i)}
-                className="w-full flex items-center justify-between p-6 text-left font-medium text-charcoal hover:bg-waten-card/50 transition-colors"
+                className="w-full flex items-center justify-between p-6 md:p-8 text-left font-medium text-charcoal hover:bg-waten-card/50 transition-colors"
                 aria-expanded={open === i}
               >
                 {faq.q}
@@ -50,12 +51,13 @@ export default function FAQ() {
                 </span>
               </button>
               {open === i && (
-                <div className="px-6 pb-6 text-muted leading-relaxed">
+                <div className="px-6 md:px-8 pb-8 text-stone-600 leading-body max-w-2xl">
                   {faq.a}
                 </div>
               )}
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

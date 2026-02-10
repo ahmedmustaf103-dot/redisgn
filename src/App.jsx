@@ -12,6 +12,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
 import ProjectDetail from './components/ProjectDetail';
+import FadeUp from './components/FadeUp';
 
 function HomePage() {
   return (
@@ -20,15 +21,15 @@ function HomePage() {
       <Header />
       <main>
         <Hero />
-        <TrustElements />
-        <About />
-        <FeaturedProjects />
-        <WhyChooseUs />
-        <Team />
-        <Contact />
-        <FAQ />
+        <FadeUp><TrustElements /></FadeUp>
+        <FadeUp><About /></FadeUp>
+        <FadeUp><FeaturedProjects /></FadeUp>
+        <FadeUp><WhyChooseUs /></FadeUp>
+        <FadeUp><Team /></FadeUp>
+        <FadeUp><Contact /></FadeUp>
+        <FadeUp><FAQ /></FadeUp>
       </main>
-      <Footer />
+      <FadeUp><Footer /></FadeUp>
       <FloatingCTA />
     </>
   );

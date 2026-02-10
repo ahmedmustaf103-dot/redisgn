@@ -1,3 +1,5 @@
+import CountUpStat from './CountUpStat';
+
 const aboutProof = [
   { value: '19,000+', label: 'sqm largest site' },
   { value: '74+', label: 'residential units' },
@@ -40,43 +42,40 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-32 bg-waten-bg">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div>
-            <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-4">
+    <section id="about" className="py-28 lg:py-36 bg-waten-bg">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-20 lg:gap-28 items-center">
+          <div className="max-w-xl">
+            <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-5">
               About us
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium leading-tight mb-6">
+            <h2 className="font-serif text-5xl md:text-6xl text-charcoal font-semibold leading-tight mb-8">
               Enhancing Urban
               <br />
               Landscapes
             </h2>
-            <p className="text-muted text-lg leading-relaxed mb-6">
+            <p className="text-stone-600 text-lg leading-body max-w-xl mb-8">
               With a commitment to excellence and sustainability, we focus on delivering both{' '}
               <strong className="text-charcoal">commercial</strong> and <strong className="text-charcoal">residential</strong> developments.
             </p>
-            <p className="text-muted leading-relaxed">
+            <p className="text-stone-600 leading-body max-w-xl mb-10">
               Guided by principles of transparency, quality, and innovation, we are building a reputation for delivering projects that enrich the architectural scene in the major cities of The Kingdom.
             </p>
             {/* Social proof by the numbers */}
-            <div className="flex flex-wrap gap-6 mt-8">
+            <div className="flex flex-wrap gap-10 mt-10">
               {aboutProof.map((s, i) => (
-                <div key={i} className="flex items-baseline gap-2">
-                  <span className="font-serif text-2xl md:text-3xl text-waten-accent font-medium">{s.value}</span>
-                  <span className="text-muted text-sm">{s.label}</span>
-                </div>
+                <CountUpStat key={i} value={s.value} label={s.label} className="text-left" />
               ))}
             </div>
-            <p className="text-muted text-sm mt-6 italic">
+            <p className="text-stone-600 text-sm mt-8 italic max-w-xl">
               Recognised for excellence in commercial and residential development across the Kingdom.
             </p>
           </div>
-          <div className="grid gap-8">
+          <div className="grid gap-10">
             {features.map((feature, i) => (
               <div
                 key={i}
-                className="flex gap-6 p-8 bg-waten-card border border-waten-stone hover:border-waten-accent/40 transition-colors group"
+                className="flex gap-6 p-10 bg-waten-card border border-waten-stone hover:border-waten-accent/40 transition-colors group"
               >
                 <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center bg-waten-card text-waten-ink group-hover:bg-waten-accent group-hover:text-white transition-colors">
                   {feature.icon}
@@ -85,9 +84,9 @@ export default function About() {
                   <h3 className="font-serif text-xl text-charcoal font-medium mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-muted leading-relaxed">
-                    {feature.description}
-                  </p>
+<p className="text-stone-600 leading-body">
+                  {feature.description}
+                </p>
                 </div>
               </div>
             ))}

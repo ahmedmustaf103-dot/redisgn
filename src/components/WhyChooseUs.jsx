@@ -50,30 +50,30 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-waten" className="relative py-24 lg:py-32 bg-waten-bg text-waten-ink overflow-hidden">
+    <section id="why-waten" className="relative py-28 lg:py-36 bg-waten-bg text-waten-ink overflow-hidden">
       {/* Subtle top border for separation */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-waten-accent/30 to-transparent" aria-hidden="true" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        <header className="text-center max-w-2xl mx-auto mb-14">
-          <p className="uppercase tracking-[0.2em] text-waten-accent text-xs font-semibold mb-3">
+      <div className="relative max-w-6xl mx-auto px-6">
+        <header className="text-center max-w-2xl mx-auto mb-20">
+          <p className="uppercase tracking-[0.2em] text-waten-accent text-xs font-semibold mb-4">
             Why Waten?
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight text-charcoal mb-4">
+          <h2 className="font-serif text-5xl md:text-6xl font-semibold leading-tight text-charcoal mb-6">
             Benefit-Driven Results
           </h2>
-          <div className="w-12 h-0.5 bg-waten-accent/50 mx-auto mb-6" aria-hidden="true" />
-          <p className="text-waten-muted text-lg leading-relaxed">
+          <div className="w-12 h-0.5 bg-waten-accent/50 mx-auto mb-8" aria-hidden="true" />
+          <p className="text-stone-600 text-lg leading-body max-w-xl mx-auto">
             We deliver more than buildings — transparency, quality, and innovation at every step.
           </p>
         </header>
 
         {/* Social proof stats */}
-        <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 mb-20">
+        <div className="flex flex-wrap justify-center gap-x-12 gap-y-10 mb-24">
           {proofStats.map((s, i) => (
             <div key={i} className="flex flex-col items-center text-center">
-              <span className="font-serif text-3xl md:text-4xl text-waten-accent font-medium tabular-nums">{s.value}</span>
-              <span className="text-waten-muted text-sm mt-1 max-w-[120px]">{s.label}</span>
+              <span className="font-serif text-4xl md:text-5xl lg:text-6xl text-waten-accent font-semibold tabular-nums">{s.value}</span>
+              <span className="text-stone-600 text-sm mt-4 max-w-[140px]">{s.label}</span>
             </div>
           ))}
         </div>
@@ -93,7 +93,7 @@ export default function WhyChooseUs() {
                 <h3 className="font-serif text-xl lg:text-2xl font-medium text-charcoal mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-waten-muted text-sm lg:text-base leading-relaxed">
+                <p className="text-stone-600 text-sm lg:text-base leading-body">
                   {benefit.copy}
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Featured project image — quality in practice */}
-        <div className="mt-16 max-w-3xl mx-auto">
+        <div className="mt-20 max-w-3xl mx-auto">
           <a
             href="#/project/murabbaa-residence"
             className="block rounded-xl overflow-hidden border border-waten-stone/80 hover:border-waten-accent/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-waten-accent focus-visible:ring-offset-2"

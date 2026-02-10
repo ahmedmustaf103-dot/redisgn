@@ -7,12 +7,42 @@ html {
 }
 
 body {
-  @apply font-sans text-charcoal antialiased;
+  @apply font-sans text-stone-600 antialiased;
   background-color: #E9E1D2;
+  line-height: 1.75;
+}
+
+/* Paragraph readability: lighter gray, max width */
+.prose-body {
+  color: #57534e;
+  line-height: 1.75;
+  max-width: 42rem;
 }
 
 #root {
   min-height: 100vh;
+}
+
+/* Primary button — brand colour, consistent padding & rounded, smooth hover */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-medium bg-waten-accent text-white transition-colors duration-300;
+}
+.btn-primary:hover {
+  background-color: #2d2822;
+}
+.btn-primary:focus-visible {
+  @apply outline-none ring-2 ring-waten-accent ring-offset-2;
+}
+
+/* Section fade-up on scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-up.fade-up-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Hero fade-in on load */

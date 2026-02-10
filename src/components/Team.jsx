@@ -11,21 +11,21 @@ function getInitials(name) {
 
 export default function Team() {
   return (
-    <section id="team" className="py-16 lg:py-20 bg-waten-bg">
-      <div className="max-w-5xl mx-auto px-6">
-        <header className="text-center max-w-xl mx-auto mb-10">
-          <p className="uppercase tracking-[0.18em] text-waten-muted text-xs font-medium mb-2">
+    <section id="team" className="py-28 lg:py-36 bg-waten-bg">
+      <div className="max-w-6xl mx-auto px-6">
+        <header className="text-center max-w-xl mx-auto mb-16">
+          <p className="uppercase tracking-[0.18em] text-waten-muted text-xs font-medium mb-4">
             The Team
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-charcoal font-medium leading-tight">
+          <h2 className="font-serif text-5xl md:text-6xl text-charcoal font-semibold leading-tight mb-4">
             Our Team
           </h2>
-          <p className="text-muted text-sm mt-3">
+          <p className="text-stone-600 text-sm leading-body max-w-xl mx-auto mt-4">
             Professionals dedicated to elevating urban spaces across the Kingdom.
           </p>
         </header>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-10">
           {team.map((member, i) => (
             <div
               key={i}
@@ -53,7 +53,7 @@ export default function Team() {
                 {member.role}
               </p>
               {member.education && (
-                <p className="text-waten-muted text-xs mt-1 leading-snug">
+                <p className="text-stone-600 text-xs mt-1 leading-body">
                   {member.education}
                 </p>
               )}

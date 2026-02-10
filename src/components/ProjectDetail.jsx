@@ -15,7 +15,7 @@ export default function ProjectDetail({ slug }) {
       <div className="min-h-screen bg-waten-bg flex flex-col">
         <Header />
         <main className="flex-1 flex items-center justify-center px-6">
-          <div className="text-center">
+          <div className="max-w-6xl mx-auto w-full text-center">
             <h1 className="font-serif text-2xl text-charcoal mb-4">Project not found</h1>
             <a href="#/" className="text-waten-accent hover:underline">← Back to home</a>
           </div>
@@ -29,9 +29,9 @@ export default function ProjectDetail({ slug }) {
     <div className="min-h-screen bg-waten-bg">
       <Header />
       <main className="pt-24 pb-16">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <a href="#/" className="inline-flex items-center text-waten-accent hover:underline text-sm mb-8">
-            ← Back to Projects
+            ← Back to Portfolio
           </a>
 
           <header className="mb-12">
@@ -39,7 +39,7 @@ export default function ProjectDetail({ slug }) {
             <h1 className="font-serif text-4xl md:text-5xl text-charcoal font-medium mb-4">
               {project.title}
             </h1>
-            <p className="text-muted">{project.location}</p>
+            <p className="text-stone-600">{project.location}</p>
             <div className="flex flex-wrap gap-3 mt-4">
               <span className="px-3 py-1 bg-waten-card border border-waten-stone rounded text-sm">{project.type}</span>
               <span className={`px-3 py-1 rounded text-sm ${project.status === 'Completed' ? 'bg-waten-accent/90 text-white' : 'bg-amber-600/90 text-white'}`}>
@@ -65,8 +65,8 @@ export default function ProjectDetail({ slug }) {
 
           {project.description && (
             <section className="mb-12">
-              <h2 className="font-serif text-xl text-charcoal font-medium mb-4">About this project</h2>
-              <p className="text-muted leading-relaxed">{project.description}</p>
+              <h2 className="font-serif text-xl text-charcoal font-semibold mb-4">About this project</h2>
+              <p className="text-stone-600 leading-body max-w-2xl">{project.description}</p>
             </section>
           )}
         </div>

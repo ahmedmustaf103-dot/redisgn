@@ -19,7 +19,8 @@ export default function Hero() {
         }}
         aria-hidden="true"
       />
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 flex flex-col items-center justify-center min-h-screen text-center text-white">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 flex flex-col items-center justify-center min-h-screen text-center text-white">
+        <div className="max-w-4xl mx-auto w-full">
         <div className="animate-hero-fade-in">
           <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium leading-tight mb-8">
             {t('hero.headline')}
@@ -35,17 +36,18 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#projects"
-              className="inline-flex items-center justify-center px-10 py-5 rounded-xl text-lg font-medium bg-waten-accent text-white hover:bg-waten-ink transition-colors"
+              className="btn-primary text-lg px-10 py-5"
             >
               {t('hero.explore')}
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-10 py-5 rounded-xl text-lg font-medium border-2 border-white text-white hover:bg-white hover:text-waten-accent transition-colors"
+              className="inline-flex items-center justify-center px-10 py-5 rounded-xl text-lg font-medium border-2 border-white text-white hover:bg-white hover:text-waten-accent transition-colors duration-300"
             >
               {t('hero.cta')}
             </a>
           </div>
+        </div>
         </div>
       </div>
     </section>
