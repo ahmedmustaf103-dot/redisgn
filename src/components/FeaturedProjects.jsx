@@ -28,7 +28,7 @@ export default function FeaturedProjects() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="uppercase tracking-[0.2em] text-waten-muted text-sm font-medium mb-4">
-            Portfolio
+            Projects
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-charcoal font-medium leading-tight mb-4">
             Featured Projects

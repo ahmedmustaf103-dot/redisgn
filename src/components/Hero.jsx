@@ -6,37 +6,46 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('${HEADER_IMAGE}')` }}
       />
-      <div className="absolute inset-0 bg-waten-bg/80" />
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-waten-ink">
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium leading-tight mb-4">
-          {t('hero.headline')}
-          <br />
-          <span className="text-waten-ink">{t('hero.elevated')}</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-waten-muted max-w-2xl mx-auto mb-6 font-medium">
-          {t('hero.subline')}
-        </p>
-        <p className="text-waten-muted text-base max-w-xl mx-auto mb-10">
-          {t('hero.intro')}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#projects"
-            className="inline-flex items-center justify-center px-8 py-4 bg-waten-accent text-white font-medium hover:bg-waten-ink transition-colors"
-          >
-            {t('hero.explore')}
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 border-2 border-waten-accent text-waten-accent font-medium hover:bg-waten-accent hover:text-white transition-colors"
-          >
-            {t('hero.cta')}
-          </a>
+      {/* Dark gradient overlay using brand dark colour (waten-accent) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(58, 51, 42, 0.5) 0%, rgba(58, 51, 42, 0.75) 100%)',
+        }}
+        aria-hidden="true"
+      />
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 flex flex-col items-center justify-center min-h-screen text-center text-white">
+        <div className="animate-hero-fade-in">
+          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium leading-tight mb-8">
+            {t('hero.headline')}
+            <br />
+            <span className="text-white">{t('hero.elevated')}</span>
+          </h1>
+          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-2xl mx-auto mb-8 font-medium">
+            {t('hero.subline')}
+          </p>
+          <p className="text-white/80 text-base md:text-lg max-w-xl mx-auto mb-12">
+            {t('hero.intro')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center px-10 py-5 rounded-xl text-lg font-medium bg-waten-accent text-white hover:bg-waten-ink transition-colors"
+            >
+              {t('hero.explore')}
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-10 py-5 rounded-xl text-lg font-medium border-2 border-white text-white hover:bg-white hover:text-waten-accent transition-colors"
+            >
+              {t('hero.cta')}
+            </a>
+          </div>
         </div>
       </div>
     </section>

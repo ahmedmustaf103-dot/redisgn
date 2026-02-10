@@ -31,7 +31,7 @@ export default function ProjectDetail({ slug }) {
       <main className="pt-24 pb-16">
         <div className="max-w-5xl mx-auto px-6">
           <a href="#/" className="inline-flex items-center text-waten-accent hover:underline text-sm mb-8">
-            ← Back to Portfolio
+            ← Back to Projects
           </a>
 
           <header className="mb-12">
